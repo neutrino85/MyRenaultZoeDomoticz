@@ -1,6 +1,8 @@
 # MyRenaultZoeDomoticz
 Connecteur entre Domoticz et la Renault Zoé ZE50
 
+PLus d'infos : https://easydomoticz.com/forum/viewtopic.php?f=17&t=9644
+
 Fonctionnalités :
 
 - Activation/désactivation des plannings de charges
@@ -23,6 +25,7 @@ D'abord, le coeur de l'accès à l'api :
 
 Pour fonctionner, il a besoin d'un fichier contenant les identifiants :
 /home/pi/domoticz/scripts/python/credentials.json
+
 {
   "RenaultServiceLocation": "fr_FR",
   "RenaultServicesUsername": "adresse@gmail.com",
