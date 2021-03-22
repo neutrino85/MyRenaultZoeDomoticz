@@ -1,7 +1,7 @@
 # MyRenaultZoeDomoticz
 Connecteur entre Domoticz et la Renault Zoé ZE50
 
-PLus d'infos : https://easydomoticz.com/forum/viewtopic.php?f=17&t=9644
+Plus d'infos : https://easydomoticz.com/forum/viewtopic.php?f=17&t=9644
 
 Fonctionnalités :
 
