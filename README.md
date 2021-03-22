@@ -3,18 +3,18 @@ Connecteur entre Domoticz et la Renault Zoé ZE50
 
 Fonctionnalités :
 
--Activation/désactivation des plannings de charges
--Etat de la charge
--Etat du branchement
--Lancement du pré-conditionnement
--Lancement de la charge
--Localisation
--Kilométrage
--Autonomie renvoyée par l'api (MAJ seulement au débranchement ou fin de charge)
--Autonomie calculée
--Conso moyenne après la charge
--Suivi dépassement kilométrage location.
--Démarrage "Intelligent" de la charge
+- Activation/désactivation des plannings de charges
+- Etat de la charge
+- Etat du branchement
+- Lancement du pré-conditionnement
+- Lancement de la charge
+- Localisation
+- Kilométrage
+- Autonomie renvoyée par l'api (MAJ seulement au débranchement ou fin de charge)
+- Autonomie calculée
+- Conso moyenne après la charge
+- Suivi dépassement kilométrage location.
+- Démarrage "Intelligent" de la charge
 
 Il y a plusieurs fichiers.
 D'abord, le coeur de l'accès à l'api :
