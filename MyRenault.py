@@ -367,7 +367,7 @@ async def mainwithsession(session):
 
 	kamereonrooturl = android_config['servers']['wiredProd']['target']
 	#kamereonapikey = android_config['servers']['wiredProd']['apikey']
-	kamereonapikey = 'Ae9FDWugRxZQAGm3Sxgk7uJn6Q4CGEA2'
+	kamereonapikey = 'VAX7XYKGfa92yMvXculCkEFyfZbuM7Ss'
 	
 	gigya_session = await get_gigyasession(session, gigyarooturl, gigyaapikey, credentials['RenaultServicesUsername'], credentials['RenaultServicesPassword'])
 	with open('gigya_session.json', 'w') as outfile:
