@@ -11,18 +11,6 @@ import urllib
 import sys
 import ast
 
-async def get_android_config(session, location):
-	url = 'https://renault-wrd-prod-1-euw1-myrapp-one.s3-eu-west-1.amazonaws.com/configuration/android/config_' + location + '.json'
-	#print(url)
-	async with session.get(url) as response:
-		responsetext = await response.text()
-		if responsetext == '':
-			responsetext = '{}'
-		jsonresponse = json.loads(responsetext)
-		if 'message' in jsonresponse:
-			self.tokenData = None
-			raise MyRenaultServiceException(jsonresponse['message'])
-		return jsonresponse
 
 async def get_gigyasession(session, gigyarooturl, gigyaapikey, loginID, password):
 	payload = {'loginID': loginID, 'password': password, 'apiKey': gigyaapikey}
@@ -356,17 +344,11 @@ async def mainwithsession(session):
 	in_file = open(sys.argv[1], 'r')
 	credentials = json.load(in_file)
 	in_file.close()
-
-	android_config = await get_android_config(session, credentials['RenaultServiceLocation'])
-	with open('android_config.json', 'w') as outfile:
-		json.dump(android_config, outfile)
-
 	
-	gigyarooturl = android_config['servers']['gigyaProd']['target']
-	gigyaapikey = android_config['servers']['gigyaProd']['apikey']
 
-	kamereonrooturl = android_config['servers']['wiredProd']['target']
-	#kamereonapikey = android_config['servers']['wiredProd']['apikey']
+	gigyarooturl = "https://accounts.eu1.gigya.com"
+	gigyaapikey = "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
+	kamereonrooturl = "https://api-wired-prod-1-euw1.wrd-aws.com"
 	kamereonapikey = 'VAX7XYKGfa92yMvXculCkEFyfZbuM7Ss'
 	
 	gigya_session = await get_gigyasession(session, gigyarooturl, gigyaapikey, credentials['RenaultServicesUsername'], credentials['RenaultServicesPassword'])
