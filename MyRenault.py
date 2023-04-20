@@ -349,7 +349,7 @@ async def mainwithsession(session):
 	gigyarooturl = "https://accounts.eu1.gigya.com"
 	gigyaapikey = "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
 	kamereonrooturl = "https://api-wired-prod-1-euw1.wrd-aws.com"
-	kamereonapikey = 'VAX7XYKGfa92yMvXculCkEFyfZbuM7Ss'
+	kamereonapikey = 'YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J'
 	
 	gigya_session = await get_gigyasession(session, gigyarooturl, gigyaapikey, credentials['RenaultServicesUsername'], credentials['RenaultServicesPassword'])
 	with open('gigya_session.json', 'w') as outfile:
