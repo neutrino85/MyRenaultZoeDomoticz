@@ -140,7 +140,7 @@ async def get_vehicles(session, kamereonrooturl, kamereonapikey, gigya_jwttoken,
 async def get_cockpit(session, kamereonrooturl, kamereonapikey, gigya_jwttoken, kamereonaccountid, vin):
 	headers = {'x-gigya-id_token': gigya_jwttoken, 'apikey': kamereonapikey}
 	#url = kamereonrooturl + '/commerce/v1/accounts/kmr/remote-services/car-adapter/v2/cars/' + vin + '/cockpit'
-	url = kamereonrooturl + '/commerce/v1/accounts/' + kamereonaccountid + '/kamereon/kca/car-adapter/v2/cars/' + vin + '/cockpit?country=FR'
+	url = kamereonrooturl + '/commerce/v1/accounts/' + kamereonaccountid + '/kamereon/kca/car-adapter/v1/cars/' + vin + '/cockpit?country=FR'
 	#print(url)
 	async with session.get(url, headers=headers) as response:
 		responsetext = await response.text()
